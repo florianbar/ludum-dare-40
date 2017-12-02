@@ -3,6 +3,9 @@ var vdir = keyDown + keyUp;
 hsp = moveSpeed * hdir;
 vsp = climbSpeed * vdir;
 
+if (hsp > 0) image_xscale = 1;
+if (hsp < 0) image_xscale = -1;
+
 if (!place_meeting(x,y,obj_ladder)) 
 { 
 	STATE = "default"; 

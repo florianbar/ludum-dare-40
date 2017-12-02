@@ -2,6 +2,9 @@
 var hdir = keyRight + keyLeft;
 var hsp = moveSpeed * hdir;
 
+if (hsp > 0) image_xscale = 1;
+if (hsp < 0) image_xscale = -1;
+
 // Jump
 if keyJump and !place_free(x,y+1)
 {
